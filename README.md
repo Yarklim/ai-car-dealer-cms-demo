@@ -1,33 +1,35 @@
 # AI Car Dealer CMS & Website
 
-Этот проект представляет собой **полнофункциональный адаптивный веб-сайт для продажи автомобилей** с интегрированной системой управления (CMS), построенный на современном стеке технологий. Система включает в себя продвинутый поиск, функции ИИ для автоматизации контента и полноценную панель администратора.
+This project is a **fully featured, responsive car dealership website** with an integrated content management system (CMS), built on a modern technology stack. The system includes advanced search, AI-powered content automation, and a complete admin dashboard.
 
-## 🚀 Основные технологии
+## 🚀 Core Technologies
 
-*   **Фреймворк:** Next.js (App Router, Turbo Pack).
-*   **База данных:** PostgreSQL с использованием Prisma ORM.
-*   **Стилизация:** Tailwind CSS V4 и Shadcn/UI.
-*   **Хранилище:** AWS S3 для изображений.
-*   **Кеширование и сессии:** Redis (через Upstash) для хранения избранного.
-*   **ИИ-интеграция:** Vercel AI SDK и OpenAI для автоматического распознавания данных об автомобилях по фотографиям.
+* **Framework:** Next.js (App Router, Turbopack).
+* **Database:** PostgreSQL with Prisma ORM.
+* **Styling:** Tailwind CSS v4 and Shadcn/UI.
+* **Storage:** AWS S3 for image storage.
+* **Caching and Sessions:** Redis via Upstash for storing favorite listings.
+* **AI Integration:** Vercel AI SDK and OpenAI for automatic vehicle data recognition from uploaded photos.
 
-## ✨ Ключевые особенности
+## ✨ Key Features
 
-### Для пользователей (Frontend)
-*   **Продвинутая система фильтрации:** включает каскадные фильтры для таксономии и фильтры по диапазонам (год, цена, пробег).
-*   **SEO-оптимизированная пагинация:** настроена таким образом, чтобы поисковые системы (Google) могли эффективно индексировать отдельные страницы.
-*   **Интерактивные объявления:** страницы объявлений с каруселью изображений (Swiper API), эффектами плавного перехода и полноэкранным модальным окном.
-*   **Система «Избранное»:** возможность сохранять понравившиеся автомобили в Redis-сессиях без необходимости обязательной регистрации.
-*   **Многошаговое бронирование:** форма резервирования автомобиля, позволяющая выбрать дату, время и оставить контактные данные.
-*   **Оптимизация изображений:** использование `unlazy` и `thumbhash` для создания размытых заполнителей (blur placeholders) и сервис `imageix` для динамической доставки оптимизированных изображений.
+### For Users — Frontend
 
-### Для администраторов (CMS)
-*   **Безопасный вход:** портал для админов с аутентификацией через одноразовый пароль (OTP), отправляемый на электронную почту.
-*   **ИИ-генератор объявлений:** при загрузке фото система автоматически определяет марку, модель, год выпуска, цвет и описание автомобиля, заполняя большую часть формы за пользователя.
-*   **Аналитическая панель:** интерактивные графики (построенные с помощью `recharts`) для отслеживания активности сайта и просмотров объявлений.
-*   **Управление контентом:**
-    *   Полноценные CRUD-операции для объявлений.
-    *   Редактор Rich Text (TinyMCE) для описаний.
-    *   Массовая загрузка изображений в S3 с поддержкой drag-and-drop сортировки.
-*   **Управление клиентами:** ведение базы данных подписчиков и потенциальных покупателей с отслеживанием их жизненного цикла (статусы: заинтересован, связались, купил).
-*   **Глобальный выход:** возможность для администратора завершить все активные сессии на всех устройствах одним нажатием.
+* **Advanced Filtering System:** includes cascading taxonomy filters and range-based filters such as year, price, and mileage.
+* **SEO-Optimized Pagination:** configured to help search engines such as Google efficiently index individual listing pages.
+* **Interactive Listings:** vehicle listing pages with an image carousel powered by Swiper API, smooth transition effects, and a fullscreen modal viewer.
+* **Favorites System:** allows users to save preferred vehicles in Redis-backed sessions without requiring mandatory registration.
+* **Multi-Step Reservation Flow:** a vehicle reservation form that lets users select a date, choose a time, and submit contact details.
+* **Image Optimization:** uses `unlazy` and `thumbhash` to generate blurred placeholders, together with `imageix` for dynamic delivery of optimized images.
+
+### For Administrators — CMS
+
+* **Secure Login:** admin portal with one-time password authentication sent via email.
+* **AI Listing Generator:** when photos are uploaded, the system automatically detects the vehicle make, model, year, color, and description, pre-filling most of the listing form for the administrator.
+* **Analytics Dashboard:** interactive charts built with `recharts` for tracking website activity and listing views.
+* **Content Management:**
+  * Full CRUD operations for vehicle listings.
+  * Rich Text editor powered by TinyMCE for listing descriptions.
+  * Bulk image upload to S3 with drag-and-drop sorting support.
+* **Customer Management:** database of subscribers and potential buyers with lifecycle tracking, including statuses such as interested, contacted, and purchased.
+* **Global Logout:** allows an administrator to terminate all active sessions across all devices with a single action.
