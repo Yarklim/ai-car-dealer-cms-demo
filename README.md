@@ -6,9 +6,9 @@ This project is a **fully featured, responsive car dealership website** with an 
 
 * **Framework:** Next.js (App Router, Turbopack).
 * **Database:** PostgreSQL with Prisma ORM.
-* **Styling:** Tailwind CSS v4 and Shadcn/UI.
+* **Styling:** Tailwind CSS v4.
 * **Storage:** AWS S3 for image storage.
-* **Caching and Sessions:** Redis via Upstash for storing favorite listings.
+* **Caching and Sessions:** Redis for storing favorite listings.
 * **AI Integration:** Vercel AI SDK and OpenAI for automatic vehicle data recognition from uploaded photos.
 
 ## ✨ Key Features
